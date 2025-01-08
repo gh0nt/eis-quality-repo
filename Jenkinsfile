@@ -62,7 +62,7 @@ pipeline {
                 Revisa los detalles en Jenkins: ${env.BUILD_URL}
                 MARCELO PUENTES
                 """,
-                to: "mentedigital@gmail.com",
+                to: "mentedigitalsas@gmail.com",
                 recipientProviders: [[$class: 'CulpritsRecipientProvider'], [$class: 'DevelopersRecipientProvider']]
             )
         }
