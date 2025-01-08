@@ -39,8 +39,8 @@ pipeline {
                     step([$class: 'GitHubCommitStatusSetter',
                           contextSource: [$class: 'ManuallyEnteredCommitContextSource', context: 'Tests'],
                           statusResultSource: [$class: 'ConditionalStatusResultSource', results: [
-                              [$class: 'AnyBuildResult', state: 'SUCCESS', message: 'Tests passed.'],
-                              [$class: 'AnyBuildResult', state: 'FAILURE', message: 'Some tests failed.']
+                              [$class: 'AnyBuildResult', state: 'SUCCESS', message: 'Succeded.'],
+                              [$class: 'AnyBuildResult', state: 'FAILURE', message: 'FAiled.']
                           ]]
                     ])
                 }
@@ -60,9 +60,9 @@ pipeline {
                 body: """
                 El build #${env.BUILD_NUMBER} falló.
                 Revisa los detalles en Jenkins: ${env.BUILD_URL}
-                NICOLAS ADOLFO CARDENAS PATIÑO
+                MARCELO PUENTES
                 """,
-                to: "cnicolasadolfo@gmail.com",
+                to: "mentedigital@gmail.com",
                 recipientProviders: [[$class: 'CulpritsRecipientProvider'], [$class: 'DevelopersRecipientProvider']]
             )
         }
