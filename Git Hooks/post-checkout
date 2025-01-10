@@ -1,0 +1,4 @@
+#!/bin/bash
+# Verificar la rama actual después de hacer checkout
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+echo "Te encuentras en la rama $BRANCH"

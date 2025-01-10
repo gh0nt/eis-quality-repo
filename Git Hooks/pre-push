@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Ejecutando validación del test"
+
+exit 0

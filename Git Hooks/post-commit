@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "Commit completado con éxito. Revisión: $(git rev-parse HEAD)"
